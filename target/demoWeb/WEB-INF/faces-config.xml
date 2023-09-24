@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<faces-config xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+              xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+              xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-facesconfig_2_3.xsd"
+              version="2.3">
+
+    <application>
+        <resource-bundle>
+            <base-name>resources</base-name>
+            <var>resources</var>
+        </resource-bundle>
+
+        <resource-bundle>
+            <base-name>blog</base-name>
+            <var>blog</var>
+        </resource-bundle>
+    </application>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>loginSuccess</from-outcome>
+            <to-view-id>/pages/menu.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>editarBlog</from-outcome>
+            <to-view-id>/pages/blogs_edicion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>consultarBlog</from-outcome>
+            <to-view-id>/pages/blogs_consulta.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>editarReader</from-outcome>
+            <to-view-id>/pages/readers_edicion.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>consultarReader</from-outcome>
+            <to-view-id>/pages/readers_consulta.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>*</from-view-id>
+        <navigation-case>
+            <from-outcome>menuPrincipal</from-outcome>
+            <to-view-id>/pages/menu.xhtml</to-view-id>
+        </navigation-case>
+    </navigation-rule>
+
+
+
+
+</faces-config>

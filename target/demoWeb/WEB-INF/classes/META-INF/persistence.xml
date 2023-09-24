@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://xmlns.jcp.org/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_2.xsd"
+             version="2.2">
+
+    <persistence-unit name="myPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+
+        <!-- Entidades mapeadas -->
+        <class>models.Reader</class>
+        <class>models.Blog</class>
+        <class>models.BlogsReaders</class>
+
+        <!-- Propiedades adicionales de la unidad de persistencia -->
+        <properties>
+            <property name="javax.persistence.schema-generation.database.action" value="update"/>
+            <property name="hibernate.show_sql" value="true"/>
+
+            <property name="hibernate.connection.driver_class" value="org.postgresql.Driver" />
+            <property name="hibernate.connection.url" value="jdbc:postgresql://localhost:5432/Banks" />
+            <property name="hibernate.connection.username" value="postgres" />
+            <property name="hibernate.connection.password" value="1234" />
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQL82Dialect" />
+            <property name="hibernate.hbm2ddl.auto" value="update" />
+            <property name="hibernate.default_schema" value="public" />
+            <property name="hibernate.connection.provider_class" value="org.hibernate.service.jdbc.connections.internal.C3P0ConnectionProvider" />
+
+            <property name="hibernate.c3p0.max_size" value="200" />
+            <property name="hibernate.c3p0.min_size" value="0" />
+            <property name="hibernate.c3p0.acquire_increment" value="1" />
+            <property name="hibernate.c3p0.idle_test_period" value="300" />
+            <property name="hibernate.c3p0.max_statements" value="0" />
+            <property name="hibernate.c3p0.timeout" value="100" />
+            <property name="hibernate.c3p0.unreturnedConnectionTimeout" value="86400" />
+            <property name="hibernate.c3p0.debugUnreturnedConnectionStackTraces" value="true" />
+            <property name="hibernate.connection.autoReconnect" value="true" />
+            <property name="hibernate.connection.autoReconnectForPools"	value="true" />
+            <property name="hibernate.connection.is-connection-validation-required"	value="true" />
+            <property name="hibernate.cglib.use_reflection_optimizer" value="false" />
+            <property name="hibernate.temp.use_jdbc_metadata_defaults"	value="false" />
+
+        </properties>
+    </persistence-unit>
+
+</persistence>
+
+

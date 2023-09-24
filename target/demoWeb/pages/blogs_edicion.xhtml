@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:pe="http://primefaces.org/ui/extensions">
+
+<h:head>
+    <title>Consulta de Blogs</title>
+    <h:outputStylesheet library="webjars" name="font-awesome/5.12.0/css/all.min-jsf.css" />
+    <h:outputStylesheet library="webjars" name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
+    <h:outputStylesheet name="styles.css" />
+</h:head>
+
+<h:body>
+
+    <div class="card">
+        <h:form>
+            <div class="menubar-container">
+
+                <p:commandLink action="#{readerBean.irMenuPrincipal()}">
+                    <p:graphicImage name="bandesal.png" height="30" styleClass="logo" />
+                </p:commandLink>
+
+                <p:outputLabel value="BANCO DE DESARROLLO DE EL SALVADOR" class="bank-name" />
+            </div>
+        </h:form>
+    </div>
+
+    <br/>
+
+    <h3>Edición de Blogs</h3>
+
+    <h:form id="blogFormEdicion">
+        <p:panel header="Nueva Entrada" style="width: 1200px; margin: 0 auto;">
+            <h:panelGrid columns="2">
+                <h:outputLabel for="titulo" value="Título:"/>
+                <p:inputText id="titulo" value="#{blogBean.object.title}"/>
+
+                <h:outputLabel value="Descripción:" />
+                <p:inputTextarea rows="6" value="#{blogBean.object.description}" />
+            </h:panelGrid>
+        </p:panel>
+
+        <div class="ui-g-12 ui-lg-12 paddingCard">
+            <div class="ui-g">
+                <div class="ui-g-4 ui-md-3 ui-lg-3"/>
+                <div class="ui-g-12 ui-md-6 ui-lg-6 ">
+                    <div class="ui-g-6 ui-md-6 centered">
+                        <p:commandButton value="Regresar" action="#{blogBean.regresarConsulta()}"/>
+                    </div>
+                    <div class="ui-g-6 ui-md-6 centered">
+                        <p:commandButton value="Actualizar" action="#{blogBean.actualizarBlog()}"/>
+                    </div>
+                </div>
+                <div class="ui-g-4 ui-md-3 ui-lg-3"/>
+            </div>
+        </div>
+
+    </h:form>
+</h:body>
+
+</html>

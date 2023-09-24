@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets">
+
+<h:head>
+    <h:outputStylesheet library="webjars" name="font-awesome/5.12.0/css/all.min-jsf.css" />
+    <h:outputStylesheet library="webjars" name="font-awesome/5.12.0/css/v4-shims.min-jsf.css" />
+    <h:outputStylesheet name="styles.css" />
+</h:head>
+
+<h:body>
+
+    <div class="card">
+        <h:form>
+            <div class="menubar-container">
+
+                <p:commandLink action="#{readerBean.irMenuPrincipal()}">
+                    <p:graphicImage name="bandesal.png" height="30" styleClass="logo" />
+                </p:commandLink>
+
+                <p:outputLabel value="BANCO DE DESARROLLO DE EL SALVADOR" class="bank-name" />
+            </div>
+        </h:form>
+    </div>
+
+    <br/>
+
+    <div class="ui-g-12 ui-lg-12 paddingCard">
+        <div class="ui-g">
+
+            <div class="ui-g-12 ui-md-2 ui-lg-2 ">
+                <h:form>
+                    <div>
+                        <p:menu orientation="vertical">
+                            <p:submenu label="Menú Principal">
+                                <p:menuitem value="Iniciar Sesión" url="login.xhtml" icon="fas fa-sign-in-alt"/>
+                                <p:menuitem value="Lectores" action="#{readerBean.regresarConsulta()}"
+                                            icon="fas fa-sign-in-alt"/>
+                                <p:menuitem value="Blogs" action="#{readerBean.irBlogs()}" icon="fas fa-sign-in-alt"/>
+                            </p:submenu>
+                        </p:menu>
+                    </div>
+                </h:form>
+            </div>
+
+            <div class="ui-g-12 ui-md-10 ui-lg-10">
+                <ui:fragment>
+                    <ui:include src="/pages/blogs_readers.xhtml" />
+                </ui:fragment>
+            </div>
+
+        </div>
+    </div>
+
+</h:body>
+
+</html>

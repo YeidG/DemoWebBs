@@ -1,0 +1,113 @@
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f9e8; }
+
+
+.card {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 16px;
+}
+
+.centered {
+    display: flex !important;
+    justify-content: center !important;
+}
+
+.paddingCard {
+    padding: 20px;}
+
+.logo {
+    height: 50px;
+    margin-top: 10px;
+}
+
+.logo img {
+    height: 100%;
+    width: auto;
+}
+
+
+.panel {
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.panel-header {
+    font-size: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #007bff; /* Azul */
+}
+
+/* Estilos para los formularios y etiquetas */
+form {
+    margin-bottom: 10px;
+}
+
+label {
+    font-weight: bold;
+    color: #007bff; /* Azul */
+}
+
+input[type="text"], input[type="password"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+/* Estilos para el botón de inicio de sesión */
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #007bff; /* Azul */
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3; /* Azul oscuro */
+}
+
+/* Estilos para los mensajes */
+.messages {
+    margin-bottom: 10px;
+}
+
+.messages .ui-message {
+    margin-bottom: 10px;
+}
+
+/* Estilos para el menú */
+.menubar {
+    margin-bottom: 20px;
+}
+
+.menubar .ui-menuitem {
+    font-size: 16px;
+    color: blue;
+}
+
+.menubar-container {
+    display: flex;
+    align-items: center;
+}
+
+.logo {
+    margin-right: 10px;
+}
+
+.bank-name {
+    font-size: 20px; 
+    font-weight: bold;
+

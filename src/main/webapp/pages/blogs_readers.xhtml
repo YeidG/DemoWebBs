@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+<h:body>
+
+    <h3>Bienvenido #{readerBean.reader.name}, tus blogs son:</h3>
+
+    <h:form id="blogForm">
+
+        <div class="ui-g-12 ui-lg-12 paddingCard">
+            <p:dataTable id="tablaBlogs" var="x" value="#{readerBean.reader.blogsReadersList}">
+                <p:column headerText="ID" width="20%">
+                    <h:outputText value="#{x.blog.id}"/>
+                </p:column>
+
+                <p:column headerText="Título" width="20%">
+                    <h:outputText value="#{x.blog.title}"/>
+                </p:column>
+
+                <p:column headerText="Descripción" width="60%">
+                    <h:outputText value="#{x.blog.description}"/>
+                </p:column>
+
+            </p:dataTable>
+        </div>
+
+    </h:form>
+</h:body>
+
+</html>

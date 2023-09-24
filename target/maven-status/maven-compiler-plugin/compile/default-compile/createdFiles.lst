@@ -1,0 +1,13 @@
+models\BlogReaderspk.class
+daos\ReaderDao.class
+services\BlogResource.class
+models\Reader.class
+daos\BlogsReadersDao.class
+daos\JPAConfig.class
+beans\BlogBean.class
+daos\BlogDao.class
+models\BlogsReaders.class
+services\RestApplication.class
+services\ReaderResource.class
+models\Blog.class
+beans\ReaderBean.class
